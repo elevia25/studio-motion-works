@@ -1,26 +1,27 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-void: #0a0a0a;
+  --color-charcoal: #121212;
+  --color-gunmetal: #1a1a1a;
+  --color-bronze: #C5A065;
+  --color-copper: #B87333;
+  --color-silver: #C0C0C0;
+  --color-titanium: #8A8A8A;
+  --color-offwhite: #F5F5F5;
+  --color-mist: #A0A0A0;
+
+  --font-display: "Monument Extended", "Neue Montreal", sans-serif;
+  --font-body: "Space Grotesk", "Inter", sans-serif;
+
+  --ease-kinetic: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-fluid: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* Dynamic radial gradient that follows cursor */
+.kinetic-glow {
+  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(197, 160, 101, 0.08),
+      transparent 60%);
+} 
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
