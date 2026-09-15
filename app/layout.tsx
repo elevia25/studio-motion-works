@@ -20,7 +20,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Kinetic — Where Movement Meets Form",
+  title: "Studio Motion",
   description:
     "Bespoke kinetic sculptures, moving furnishings, and interactive installations. We don't just design objects; we design time.",
 };

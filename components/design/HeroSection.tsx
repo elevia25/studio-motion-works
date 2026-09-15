@@ -92,63 +92,6 @@ export function HeroSection() {
         </video>
         <div className="absolute inset-0 bg-void/50" />
       </div>
-
-      <div className="relative z-10 flex flex-col items-center px-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="mb-6"
-        >
-          <span className="font-body text-[10px] tracking-[0.5em] uppercase text-bronze/70">
-            Est. 2022 — Studio Motion
-          </span>
-        </motion.div>
-
-        <div ref={headlineRef}>
-          <KineticText
-            text="WHERE MOVEMENT"
-            as="h1"
-            className="font-display text-[clamp(2.5rem,8vw,7rem)] font-bold leading-[0.9] tracking-tight text-offwhite"
-            staggerDelay={0.05}
-          />
-          <KineticText
-            text="BECOMES FORM"
-            as="h1"
-            className="font-display text-[clamp(2.5rem,8vw,7rem)] font-bold leading-[0.9] tracking-tight text-bronze"
-            staggerDelay={0.05}
-          />
-        </div>
-
-        <motion.p
-          ref={subRef}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="mt-8 max-w-lg font-body text-sm leading-relaxed text-mist md:text-base"
-        >
-          {`Bespoke kinetic sculptures, moving furnishings, and interactive
-          installations. We don't just design objects; we design time.`}
-        </motion.p>
-
-        <motion.div
-          ref={ctaRef}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.6 }}
-          className="mt-12"
-        >
-          <MorphButton
-            label="Explore the Collection"
-            onClick={() => {
-              document
-                .getElementById("intro")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-          />
-        </motion.div>
-      </div>
-
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

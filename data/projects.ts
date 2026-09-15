@@ -3,7 +3,10 @@ export interface Project {
   slug: string;
   title: string;
   subtitle: string;
-  category: "Sculpture" | "Furnishing" | "Installation" | "Commission";
+  category:
+    | "Kinetic Luminaries"
+    | "Kinetic Arts"
+    | "Comissioned Works"
   year: string;
   client?: string;
   location: string;
@@ -26,7 +29,7 @@ export const projects: Project[] = [
     slug: "helix-table",
     title: "Helix Table",
     subtitle: "A coffee table that unfolds",
-    category: "Furnishing",
+    category: "Kinetic Luminaries",
     year: "2025",
     client: "Private Commission",
     location: "Milan, Italy",
@@ -62,7 +65,7 @@ export const projects: Project[] = [
     slug: "orbital-chandelier",
     title: "Orbital Chandelier",
     subtitle: "Light in constant motion",
-    category: "Sculpture",
+    category: "Kinetic Arts",
     year: "2024",
     client: "Atelier Nord",
     location: "Copenhagen, Denmark",
@@ -97,7 +100,7 @@ export const projects: Project[] = [
     slug: "tidal-wall",
     title: "Tidal Wall",
     subtitle: "A wall that breathes",
-    category: "Installation",
+    category: "Comissioned Works",
     year: "2025",
     client: "Museum of Contemporary Art",
     location: "Rotterdam, Netherlands",
@@ -132,7 +135,7 @@ export const projects: Project[] = [
     slug: "pulse-bench",
     title: "Pulse Bench",
     subtitle: "Seating that responds to presence",
-    category: "Furnishing",
+    category: "Kinetic Luminaries",
     year: "2023",
     client: "Studio Motion Works",
     location: "Studio Prototype",
@@ -163,7 +166,7 @@ export const projects: Project[] = [
     slug: "drift-pavilion",
     title: "Drift Pavilion",
     subtitle: "A structure that follows the sun",
-    category: "Installation",
+    category: "Comissioned Works",
     year: "2024",
     client: "Biennale Architettura",
     location: "Venice, Italy",
@@ -194,7 +197,7 @@ export const projects: Project[] = [
     slug: "weave-shelving",
     title: "Weave Shelving",
     subtitle: "Storage that reconfigures",
-    category: "Furnishing",
+    category: "Kinetic Luminaries",
     year: "2023",
     client: "Private Collection",
     location: "London, UK",
@@ -226,8 +229,8 @@ export const projects: Project[] = [
 
 export const projectCategories = [
   "All",
-  "Sculpture",
-  "Furnishing",
-  "Installation",
+  "Kinetic Arts",
+  "Kinetic Luminaries",
+  "Comissioned Works",
   "Commission",
 ] as const;

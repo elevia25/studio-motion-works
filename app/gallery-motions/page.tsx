@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { SharedCanvas } from "@/components/projects/SharedCanvas";
-import { ProjectsHero } from "@/components/projects/ProjectsHero";
-import { HorizontalGallery } from "@/components/projects/HorizontalGallery";
-import { ProjectList } from "@/components/projects/ProjectList";
-import { ProjectModal } from "@/components/projects/ProjectModal";
+import { SharedCanvas } from "@/components/design/projects/SharedCanvas";
+import { ProjectsHero } from "@/components/design/projects/ProjectsHero";
+import { HorizontalGallery } from "@/components/design/projects/HorizontalGallery";
+import { ProjectList } from "@/components/design/projects/ProjectList";
+import { ProjectModal } from "@/components/design/projects/ProjectModal";
 import { projects as allProjects } from "@/data/projects";
 import type { Project } from "@/data/projects";
 
@@ -32,6 +32,8 @@ export default function ProjectsPage() {
         <ProjectsHero
           activeCategory={activeCategory}
           onCategoryChange={setActiveCategory}
+          activeYear={activeYear}
+          onYearChange={setActiveYear}
           viewMode={viewMode}
           onViewModeChange={setViewMode}
         />

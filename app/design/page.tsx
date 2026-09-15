@@ -1,7 +1,7 @@
-import { CTASection } from "@/components/design/CTASection";
-import { FeaturedWorks } from "@/components/design/FeaturedWorks";
-import { HeroSection } from "@/components/design/HeroSection";
-import { IntroSection } from "@/components/design/IntroSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { FeaturedWorks } from "@/components/sections/FeaturedWorks";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { IntroSection } from "@/components/sections/IntroSection";
 
 export default function HomePage() {
   return (

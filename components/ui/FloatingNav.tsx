@@ -5,8 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 const navLinks = [
-  { label: "Projects", href: "/projects" },
-  { label: "Services", href: "/services" },
+  { label: "Gallery Motions", href: "/gallery-motions" },
   { label: "Events", href: "/events" },
   { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },
@@ -37,20 +36,32 @@ export function FloatingNav() {
           <button
             data-magnetic
             onClick={() => setIsOpen(!isOpen)}
-            className="flex h-8 w-8 flex-col items-center justify-center gap-1.5"
+            className="relative flex h-8 w-8 items-center justify-center"
             aria-label="Toggle menu"
           >
             <motion.span
-              animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 4 : 0 }}
-              className="block h-px w-5 bg-bronze"
+              animate={{
+                rotate: isOpen ? 45 : 0,
+                y: isOpen ? 0 : -6,
+              }}
+              transition={{ duration: 0.3 }}
+              className="absolute h-px w-5 bg-bronze"
             />
             <motion.span
-              animate={{ opacity: isOpen ? 0 : 1 }}
-              className="block h-px w-5 bg-bronze"
+              animate={{
+                opacity: isOpen ? 0 : 1,
+                scaleX: isOpen ? 0 : 1,
+              }}
+              transition={{ duration: 0.2 }}
+              className="absolute h-px w-5 bg-bronze"
             />
             <motion.span
-              animate={{ rotate: isOpen ? -45 : 0, y: isOpen ? -4 : 0 }}
-              className="block h-px w-5 bg-bronze"
+              animate={{
+                rotate: isOpen ? -45 : 0,
+                y: isOpen ? 0 : 6,
+              }}
+              transition={{ duration: 0.3 }}
+              className="absolute h-px w-5 bg-bronze"
             />
           </button>
         </div>
