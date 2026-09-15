@@ -1,15 +1,26 @@
 @import "tailwindcss";
 
+/* Tailwind v4: bind dark: variant to .dark class instead of media query */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
+  /* Dark theme (default) — "Midnight Mechanical" */
   --color-void: #0a0a0a;
   --color-charcoal: #121212;
   --color-gunmetal: #1a1a1a;
+  --color-surface: #1f1f1f;
+  --color-border: rgba(255, 255, 255, 0.06);
+
+  /* Accents — constant across themes */
   --color-bronze: #C5A065;
   --color-copper: #B87333;
   --color-silver: #C0C0C0;
   --color-titanium: #8A8A8A;
-  --color-offwhite: #F5F5F5;
-  --color-mist: #A0A0A0;
+
+  /* Text */
+  --color-ink: #F5F5F5;
+  --color-ink-muted: #A0A0A0;
+  --color-ink-subtle: #6B6B6B;
 
   --font-display: "Monument Extended", "Neue Montreal", sans-serif;
   --font-body: "Space Grotesk", "Inter", sans-serif;
@@ -18,10 +29,38 @@
   --ease-fluid: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+/* Light theme — "Gallery White" */
+.light {
+  --color-void: #F5F5F0;
+  --color-charcoal: #FFFFFF;
+  --color-gunmetal: #FAFAF7;
+  --color-surface: #FFFFFF;
+  --color-border: rgba(0, 0, 0, 0.08);
+
+  --color-ink: #121212;
+  --color-ink-muted: #6B6B6B;
+  --color-ink-subtle: #9A9A9A;
+
+  /* Bronze stays warm — slightly deeper for contrast on white */
+  --color-bronze: #A8843F;
+  --color-copper: #9A5E2A;
+}
+
 /* Dynamic radial gradient that follows cursor */
 .kinetic-glow {
   background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
       rgba(197, 160, 101, 0.08),
       transparent 60%);
-} 
+}
 
+.light .kinetic-glow {
+  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(168, 132, 63, 0.06),
+      transparent 60%);
+}
+
+/* Smooth theme transition on body only */
+body {
+  transition: background-color 0.5s var(--ease-fluid),
+    color 0.5s var(--ease-fluid);
+}

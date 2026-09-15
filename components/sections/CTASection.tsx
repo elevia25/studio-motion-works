@@ -8,7 +8,7 @@ export function CTASection() {
     <section className="relative overflow-hidden px-6 py-32 md:py-48">
       {/* Ambient glow */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-bronze/[0.04] blur-[120px]" />
+        <div className="absolute left-1/2 top-1/2 h-150 w-150 -translate-x-1/2 -translate-y-1/2 rounded-full bg-bronze/4 blur-[120px]" />
       </div>
 
       <div className="relative mx-auto flex max-w-4xl flex-col items-center text-center">
@@ -38,10 +38,10 @@ export function CTASection() {
       </div>
 
       {/* Footer */}
-      <footer className="relative mx-auto mt-32 max-w-7xl border-t border-white/[0.06] pt-12">
+      <footer className="relative mx-auto mt-32 max-w-7xl border-t border-white/6 pt-12">
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <span className="font-display text-sm tracking-[0.3em] text-offwhite/40">
-            STUDIO MOTION
+            STUDIO MOTION WORKS
           </span>
 
           <div className="flex flex-wrap gap-8">
@@ -58,7 +58,7 @@ export function CTASection() {
           </div>
 
           <span className="font-body text-[10px] tracking-[0.2em] text-mist/30">
-            © 2026 Kinetic Studio
+            © 2026 Studio Motion Works
           </span>
         </div>
       </footer>

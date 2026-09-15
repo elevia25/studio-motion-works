@@ -66,7 +66,7 @@ export function HeroSection() {
       {/* 3D Sculpture canvas */}
       <KineticHero />
 
-      {/* Text overlay */}
+     {/* Text overlay */}
       <div className="relative z-10 flex flex-col items-center px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

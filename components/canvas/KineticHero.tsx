@@ -8,7 +8,7 @@ import * as THREE from "three";
 function BronzeRings({
   pointer,
 }: {
-  pointer: React.MutableRefObject<THREE.Vector2>;
+  pointer: React.RefObject<THREE.Vector2>;
 }) {
   const groupRef = useRef<THREE.Group>(null);
 

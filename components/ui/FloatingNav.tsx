@@ -23,7 +23,7 @@ export function FloatingNav() {
   return (
     <>
       <motion.nav
-        style={{ opacity: navOpacity }}
+        style={{ opacity: navOpacity, width: navWidth }}
         className="fixed top-6 left-1/2 z-[100] -translate-x-1/2"
       >
         <div className="flex items-center gap-6 rounded-full border border-white/[0.06] bg-charcoal/80 px-6 py-3 backdrop-blur-xl">
@@ -31,7 +31,7 @@ export function FloatingNav() {
             href="/"
             className="font-display text-sm tracking-[0.3em] text-offwhite"
           >
-            STUDIO MOTION
+            STUDIO MOTION WORKS
           </Link>
 
           <button
@@ -60,9 +60,7 @@ export function FloatingNav() {
       <motion.div
         initial={{ clipPath: "circle(0% at 50% 0%)" }}
         animate={{
-          clipPath: isOpen
-            ? "circle(150% at 50% 0%)"
-            : "circle(0% at 50% 0%)",
+          clipPath: isOpen ? "circle(150% at 50% 0%)" : "circle(0% at 50% 0%)",
         }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="fixed inset-0 z-[90] flex flex-col items-center justify-center bg-void/98 backdrop-blur-2xl"

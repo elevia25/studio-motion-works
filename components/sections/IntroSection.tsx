@@ -27,7 +27,7 @@ export function IntroSection() {
             end: "top 20%",
             scrub: 1.5,
           },
-        }
+        },
       );
 
       // Text slides in from right
@@ -43,7 +43,7 @@ export function IntroSection() {
             end: "top 30%",
             scrub: 1,
           },
-        }
+        },
       );
     }, sectionRef);
 

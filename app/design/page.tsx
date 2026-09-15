@@ -1,0 +1,15 @@
+import { CTASection } from "@/components/design/CTASection";
+import { FeaturedWorks } from "@/components/design/FeaturedWorks";
+import { HeroSection } from "@/components/design/HeroSection";
+import { IntroSection } from "@/components/design/IntroSection";
+
+export default function HomePage() {
+  return (
+    <div className="noise-overlay min-h-screen relative">
+      <HeroSection />
+      <IntroSection />
+      <FeaturedWorks />
+      <CTASection />
+    </div>
+  );
+}

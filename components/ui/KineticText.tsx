@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+import { useState } from "react";
 
 interface KineticTextProps {
   text: string;
