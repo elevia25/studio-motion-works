@@ -1,6 +1,7 @@
 "use client";
 
 import { MorphButton } from "@/components/ui/MorphButton";
+import Image from "next/image";
 
 export function CTASection() {
   return (
@@ -30,32 +31,7 @@ export function CTASection() {
           <MorphButton label="View Services" />
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="relative mx-auto mt-32 max-w-7xl border-t border-white/6 pt-12">
-        <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
-          <span className="font-display text-sm tracking-[0.3em] text-offwhite/40">
-            STUDIO MOTION WORKS
-          </span>
-
-          <div className="flex flex-wrap gap-8">
-            {["Instagram", "Behance", "LinkedIn", "Vimeo"].map((social) => (
-              <a
-                key={social}
-                href="#"
-                data-magnetic
-                className="font-body text-[10px] tracking-[0.2em] uppercase text-mist/50 transition-colors hover:text-bronze"
-              >
-                {social}
-              </a>
-            ))}
-          </div>
-
-          <span className="font-body text-[10px] tracking-[0.2em] text-mist/30">
-            © 2026 Studio Motion Works
-          </span>
-        </div>
-      </footer>
+      
     </section>
   );
 }

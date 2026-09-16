@@ -6,6 +6,7 @@ import { MagneticCursor } from "@/components/ui/MagneticCursor";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import "./globals.css";
+import Footer from "@/components/ui/Footer";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function RootLayout({
             <FloatingNav />
             <ThemeToggle />
             <main>{children}</main>
+            <Footer />
           </SmoothScroll>
         </ThemeProvider>
       </body>

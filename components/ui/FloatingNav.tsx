@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Gallery Motions", href: "/gallery-motions" },
@@ -23,14 +24,22 @@ export function FloatingNav() {
     <>
       <motion.nav
         style={{ opacity: navOpacity, width: navWidth }}
-        className="fixed top-6 left-1/2 z-[100] -translate-x-1/2"
+        className="fixed top-6 left-1/2 z-100 -translate-x-1/2"
       >
-        <div className="flex items-center gap-6 rounded-full border border-white/[0.06] bg-charcoal/80 px-6 py-3 backdrop-blur-xl">
+        <div className="flex items-center gap-6 rounded-full border border-white/6 bg-charcoal/80 px-6 py-3 backdrop-blur-xl">
           <Link
             href="/"
-            className="font-display text-sm tracking-[0.3em] text-offwhite"
+            className="flex items-center"
+            onClick={() => setIsOpen(false)}
           >
-            STUDIO MOTION WORKS
+            <Image
+              src="/logo.svg"
+              alt="Studio Motion Works Logo"
+              width={160}
+              height={40}
+              className="h-8 w-auto invert brightness-200 object-contain"
+              priority
+            />
           </Link>
 
           <button
@@ -74,7 +83,7 @@ export function FloatingNav() {
           clipPath: isOpen ? "circle(150% at 50% 0%)" : "circle(0% at 50% 0%)",
         }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="fixed inset-0 z-[90] flex flex-col items-center justify-center bg-void/98 backdrop-blur-2xl"
+        className="fixed inset-0 z-90 flex flex-col items-center justify-center bg-void/98 backdrop-blur-2xl"
       >
         <nav className="flex flex-col items-center gap-8">
           {navLinks.map((link, i) => (

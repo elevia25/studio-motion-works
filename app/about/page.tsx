@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { AboutHero } from "@/components/about/AboutHero";
-import { OriginSection } from "@/components/about/OriginSection";
 import { FounderSection } from "@/components/about/FounderSection";
 import { SantoorResonance } from "@/components/about/SantoorResonance";
 import { Timeline } from "@/components/about/Timeline";
@@ -20,11 +19,10 @@ export default function AboutPage() {
   return (
     <>
       <AboutHero />
-      <OriginSection />
       <FounderSection />
       <SantoorResonance />
       <Timeline />
-      <SpaceKinematics />
+      {/* <SpaceKinematics /> */}
       <NotableProjects />
       <PhilosophyQuote />
       <ValuesGrid />
