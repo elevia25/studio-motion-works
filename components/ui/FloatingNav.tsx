@@ -3,10 +3,11 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "./Logo";
 
 const navLinks = [
-  { label: "Gallery Motions", href: "/gallery-motions" },
+  { label: "Home", href: "/" },
+  { label: "Gallery of Motions", href: "/gallery-motions" },
   { label: "Events", href: "/events" },
   { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },
@@ -29,17 +30,10 @@ export function FloatingNav() {
         <div className="flex items-center gap-6 rounded-full border border-white/6 bg-charcoal/80 px-6 py-3 backdrop-blur-xl">
           <Link
             href="/"
-            className="flex items-center"
+            className="w-40 h-auto text-black dark:text-white"
             onClick={() => setIsOpen(false)}
           >
-            <Image
-              src="/logo.svg"
-              alt="Studio Motion Works Logo"
-              width={160}
-              height={40}
-              className="h-8 w-auto invert brightness-200 object-contain"
-              priority
-            />
+            <Logo width={160} height={40} />
           </Link>
 
           <button

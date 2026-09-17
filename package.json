@@ -17,7 +17,7 @@
     "gsap": "^3.15.0",
     "lenis": "^1.3.26",
     "lucide-react": "^1.41.0",
-    "next": "16.3.4",
+    "next": "16.2.9",
     "next-themes": "^0.4.6",
     "react": "19.2.8",
     "react-dom": "19.2.8",
@@ -35,5 +35,7 @@
     "tailwindcss": "^4",
     "typescript": "^5"
   },
-  "packageManager": "pnpm@11.21.0"
+  "allowScripts": {
+    "unrs-resolver@1.12.2": true
+  }
 }

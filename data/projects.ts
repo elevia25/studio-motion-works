@@ -232,5 +232,4 @@ export const projectCategories = [
   "Kinetic Arts",
   "Kinetic Luminaries",
   "Comissioned Works",
-  "Commission",
 ] as const;
