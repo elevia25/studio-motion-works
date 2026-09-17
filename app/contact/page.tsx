@@ -15,7 +15,6 @@ export default function ContactPage() {
       <ContactHero />
       <ContactGrid />
       <ContactClosing />
-      <div className="h-16" />
     </>
   );
 }

@@ -27,7 +27,7 @@ export default function AboutPage() {
       <PhilosophyQuote />
       <ValuesGrid />
       <AboutCTA />
-      <div className="h-16" />
+      
     </>
   );
 }

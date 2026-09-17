@@ -32,7 +32,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="relative mx-auto mt-32 max-w-7xl border-t border-white/6 px-6 pt-16 pb-10">
+    <footer className="relative mx-auto max-w-7xl border-t border-white/6 px-6 pt-16 pb-10">
       <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
         {/* Logo + studio address */}
         <div className="flex flex-col gap-6">
